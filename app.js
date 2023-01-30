@@ -1,3 +1,4 @@
+alert("Please open your console using keyboard shortcut Command+Option+J");
 console.log("Welcome!");
 console.log("This is a game of Rock, Paper, Scissors");
 console.log("Please call the function game() to start.");
@@ -45,7 +46,7 @@ const computerPlay = function () {
 };
 
 const validateUserInput = function (userInput) {
-  const input = userInput.toLowerCase();
+  const input = userInput.toLowerCase().trim();
   if (choices.includes(input)) {
     return input;
   }
