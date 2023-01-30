@@ -6,11 +6,14 @@ console.log("Please call the function game() to start.");
 const game = function () {
   let userScore = 0;
   let computerScore = 0;
+  let numberRound = 0;
   console.clear();
   console.log("The game has started!");
   for (let i = 0; i < 5; i++) {
     let playerSelection = getUserInput();
     let computerSelection = computerPlay();
+    numberRound++;
+    console.log(`The round is ${numberRound}`);
     let round = playRound(playerSelection, computerSelection);
     if (round.win) {
       userScore++;
